@@ -1,0 +1,12 @@
+{
+    "name": "mvp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "Elizabeth Sims, Sims895@gmail.com",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nedb": "^1.8.0"
+    }
+}

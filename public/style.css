@@ -1,0 +1,42 @@
+h1 {
+    font-size:600%;
+    color:white;
+    background-color: blue;text-align:center
+}
+
+p {
+    font-size:150%;
+    display: table-row;
+}
+
+body {
+    background-color: white;
+    background-image: url('inspector.png');
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+form {
+    display: table;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+    font-size: 130%;
+}
+
+input.fields {
+    display: table-cell;
+    min-width: 500px;
+}
+
+textarea {
+    min-width: 800px;
+    min-height: 500px;
+    font-size: 150%;
+}

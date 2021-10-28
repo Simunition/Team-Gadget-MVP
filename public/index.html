@@ -8,32 +8,36 @@
             <h1>Team Gadget MVP Testing</h1>
             <form>
                 <p>
-                    <label for="who">Who*: </label>
+                    <label for="intro" title="Optional">Intro: </label>
+                    <input class=fields type="text" id="intro" name="intro" value="The commander failed to ensure that"><br>
+                </p>
+                <p>
+                    <label for="who" title="This should indicate the role of the person or persons because of whom the delinquincy exists, otherwise, leave as the unit being inspected. Ex: 10 of 12 contractors, gate guards, unit pilots, unit maintenance personnel, etc..">Who*: </label>
                     <input class=fields type="text" id="who" name="who" placeholder="Unit/Role" required><br>
                 </p>
                 <p>
-                    <label for="what">What*: </label>
+                    <label for="what" title="In a few words, describe the deficiency. Ex: Failed to complete training.">What*: </label>
                     <input class=fields type="text" id="what" name="what" placeholder="Did or didn't do..." required><br>
                 </p>
                 <p>
-                    <label for="when">When*: </label>
+                    <label for="when" title="Single date or date range.">When*: </label>
                     <input type="date" id="when" name="when" required> - 
                     <input type="date" id="when2" name="when2" required><br>
                 </p>
                 <p>
-                    <label for="where">Where*: </label>
+                    <label for="where" title="Physical or non-physical location. Ex: Building XX, SCIF in building X, runway XX, Share Point/Share Drive.">Where*: </label>
                     <input class=fields type="text" id="where" name="where" placeholder="Base" required><br>
                 </p>
                 <p>
-                    <label for="why">Why*: </label>
+                    <label for="why" title="Root cause of deficiency. I.e. Lack of funding, insufficient manning, user error, etc..">Why*: </label>
                     <input class=fields type="text" id="why" name="why" placeholder="Root Cause" required><br>
                 </p>
                 <p>
-                    <label for="impact">Impact*: </label>
+                    <label for="impact" title="Direct impact to mission or support functions, second and third order effects. Ex: Exposed unit to legal/financial liability, specific degradation to the mission, inability to maintain role proficiency, etc..">Impact*: </label>
                     <input class=fields type="text" id="impact" name="impact" placeholder="And then..." required><br>
                 </p>
                 <p>
-                    <label for="additional">Additional:</label>
+                    <label for="additional" title="Optional">Additional:</label>
                     <input class=fields type="text" id="additional" name="additional"><br>
                 </p>
                 <p>
@@ -42,16 +46,16 @@
                 </p>
                 <p>
                     <input type="button" id="update" name="update" value="Update" onclick="getInput()"><br>
-                    <input type="button" id="submit" name="submit" value="Submit" onclick="submitData()">
+                    <input type="button" id="submit" name="submit" value="Submit" onclick="submitData()"><br>
                 </p>
             </form>
             <p>
-                <strong>Tips:</strong><br><br>
+                <br><br><strong>Tips:</strong><br><br>
                 Who - This should indicate the role of the person or persons because of whom
                 the delinquincy exists, otherwise, leave as the unit being inspected. Ex: 10 of 12
                 contractors, gate guards, unit pilots, unit maintenance personnel, etc..<br><br>
 
-                What - In one or two sentences, describe the deficiency. Ex: Failed to complete 
+                What - In a few words, describe the deficiency. Ex: Failed to complete 
                 training.<br><br>
 
                 When - Single date or date range.<br><br>

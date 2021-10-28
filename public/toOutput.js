@@ -1,4 +1,5 @@
 function getInput(){
+    var intro = document.getElementById("intro").value;
     var who = document.getElementById("who").value;
     var what = document.getElementById("what").value;
     var when1 = document.getElementById("when").value;
@@ -6,12 +7,13 @@ function getInput(){
     var where = document.getElementById("where").value;
     var why = document.getElementById("why").value;
     var impact = document.getElementById("impact").value;
-    toOutput(who, what, when1, when2, where, why, impact);
+    var additional = document.getElementById("additional").value;
+    toOutput(intro, who, what, when1, when2, where, why, impact, additional);
 }
 
-function toOutput(who, what, when1, when2, where, why, impact) {
-    var output = who + " " + what + " " + when1 + " " + when2 + " " + where +
-        " " + why + " " + impact + " ";
+function toOutput(intro, who, what, when1, when2, where, why, impact, additional) {
+    var output = intro + "" + who + " " + what + " " + when1 + " " + when2 + " " + where +
+        " " + why + " " + impact + " " + additional + ".";
     document.getElementById('output').value = output;
 }
 

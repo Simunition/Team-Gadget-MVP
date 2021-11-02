@@ -6,7 +6,14 @@
         </head>
         <body>
             <h1>Team Gadget MVP Testing</h1>
-            <form>
+            <form action="connect.php" method="post">
+                <p>
+                    <label for="severityLabel" title="Severity">Severity: </label>
+                    <label for="severity" class="radio-inline" name="severity">
+                        <input type="radio" name="severity" id="minor" value="minor">Minor
+                        <input type="radio" name="severity" id="moderate" value="moderate">Moderate
+                        <input type="radio" name="severity" id="critical" value="critical">Critical</label>
+                </p>
                 <p>
                     <label for="intro" title="Optional">Intro: </label>
                     <input class=fields type="text" id="intro" name="intro" value="The commander failed to ensure that"><br>
@@ -21,8 +28,8 @@
                 </p>
                 <p>
                     <label for="when" title="Single date or date range.">When*: </label>
-                    <input type="date" id="when" name="when" required> - 
-                    <input type="date" id="when2" name="when2" required><br>
+                    <input type="date" id="when1" name="when1" required> - 
+                    <input type="date" id="when2" name="when2"><br>
                 </p>
                 <p>
                     <label for="where" title="Physical or non-physical location. Ex: Building XX, SCIF in building X, runway XX, Share Point/Share Drive.">Where*: </label>
@@ -45,7 +52,9 @@
                     <textarea id="output" name="output"></textarea>
                 </p>
                 <p>
-                    <input type="button" id="update" name="update" value="Update" onclick="getInput()"><br>
+                    <input type="button" id="update" name="update" value="Update" onclick="getInput()">
+                </p>
+                <p>
                     <input type="button" id="submit" name="submit" value="Submit" onclick="submitData()"><br>
                 </p>
             </form>

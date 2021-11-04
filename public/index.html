@@ -6,14 +6,29 @@
         </head>
         <body>
             <h1>Team Gadget MVP Testing</h1>
-            <form action="connect.php" method="post">
+            <form id=writeupform>
                 <p>
-                    <label for="severityLabel" title="Severity">Severity: </label>
-                    <label for="severity" class="radio-inline" name="severity">
-                        <input type="radio" name="severity" id="minor" value="minor">Minor
-                        <input type="radio" name="severity" id="moderate" value="moderate">Moderate
+                    <label for="typeLabel" title="Type of Write-Up">Type*: </label>
+                    <label for="type" class="radio-inline" name="type" id="type">
+                        <input type="radio" name="type" id="grade/summary" value="grade/summary">Grade/Summary
+                        <input type="radio" name="type" id="deficiency" value="deficiency" checked>Deficiency
+                        <input type="radio" name="type" id="strength" value="strength">Strength
+                        <input type="radio" name="type" id="RIA" value="RIA">Recommended Improvement Area
+                        <input type="radio" name="type" id="note" value="note">Note
+                    </label>
+                </p>
+                <p>
+                    <label for="severityLabel" title="Critical - Mission Failure; Significant - ">Severity*: </label>
+                    <label for="severity" class="radio-inline" name="severity" id="severity">
+                        <input type="radio" name="severity" id="minor" value="minor" checked>Minor
+                        <input type="radio" name="severity" id="significant" value="significant">Significant
                         <input type="radio" name="severity" id="critical" value="critical">Critical</label>
                 </p>
+                <p>
+                    <label for="reference" title="Format should be document paragraph, separated by semi-colons. If referencing the same document multiple times, enter as separate entries. EX: AFI 36-2903 3.9.7; AFI 36-2903 9.1.1">Reference(s): </label>
+                    <input class=fields type="text" id="reference" name="intro" placeholder="AFI XX-XXXX X.X.X; AFMAN X-XX X.X.X"><br>
+                </p>
+                <br>
                 <p>
                     <label for="intro" title="Optional">Intro: </label>
                     <input class=fields type="text" id="intro" name="intro" value="The commander failed to ensure that"><br>
@@ -27,7 +42,7 @@
                     <input class=fields type="text" id="what" name="what" placeholder="Did or didn't do..." required><br>
                 </p>
                 <p>
-                    <label for="when" title="Single date or date range.">When*: </label>
+                    <label for="when" title="Single date or date range. The first date field is mandatory, the second is optional.">When*: </label>
                     <input type="date" id="when1" name="when1" required> - 
                     <input type="date" id="when2" name="when2"><br>
                 </p>
@@ -48,14 +63,22 @@
                     <input class=fields type="text" id="additional" name="additional"><br>
                 </p>
                 <p>
-                    <label for="output">Output: </label>
+                    <label for="output">Output*: </label>
                     <textarea id="output" name="output"></textarea>
                 </p>
+            </form>
+            <br>
+            <form>
                 <p>
-                    <input type="button" id="update" name="update" value="Update" onclick="getInput()">
+                    <input type="button" id="update" name="update" value="Update Output" onclick="getInput()"><br>
                 </p>
+                <br>
                 <p>
-                    <input type="button" id="submit" name="submit" value="Submit" onclick="submitData()"><br>
+                    <input type="button" id="help" name="help" value="Help ?" onclick="getHelp()"><br>
+                </p>
+                <br>
+                <p>
+                    <input type="button" class="submit" id="submit" name="submit" value="Submit" onclick="submitData()"><br>
                 </p>
             </form>
             <p>

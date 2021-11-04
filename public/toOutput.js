@@ -12,7 +12,7 @@ function getInput(){
 }
 
 function toOutput(intro, who, what, when1, when2, where, why, impact, additional) {
-    const output = intro + "" + who + " " + what + " " + when1 + " " + when2 + " " + where +
+    const output = intro + " " + who + " " + what + " " + when1 + " " + when2 + " " + where +
         " " + why + " " + impact + " " + additional + ".";
     document.getElementById('output').value = output;
 }

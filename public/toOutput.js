@@ -46,7 +46,12 @@ async function submitData() {
         const response = await fetch('/api', options);
         const responseData = await response.text();
         console.log(responseData);
-        alert('Submission Successful, Thank You!');
+        if (responseData == "Success") {
+            alert('Submission Successful, Thank You!');
+            resetForm();
+        } else {
+            alert('Submission Error, please try again');
+        }
     } else {
         alert('Please fill out all mandatory fields marked with *');
     }
@@ -78,22 +83,16 @@ function getHelp() {
 }
 
 function resetForm() {
-    const reference = document.getElementById("reference").value;
-    const intro = document.getElementById("intro").value;
-    const who = document.getElementById("who").value;
-    const what = document.getElementById("what").value;
-    const when1 = document.getElementById("when1").value;
-    const when2 = document.getElementById("when2").value;
-    const where = document.getElementById("where").value;
-    const why = document.getElementById("why").value;
-    const impact = document.getElementById("impact").value;
-    const additional = document.getElementById("additional").value;
-    const output = document.getElementById('output').value;
-
-    const inputArray = [reference, intro, who, what, when1, when2, where, why, impact, additional, output];
-
-    for (const item of inputArray) {
-        item = "";
-    }
+    document.getElementById("reference").value  = "";
+    document.getElementById("intro").value = "";
+    document.getElementById("who").value = "";
+    document.getElementById("what").value = "";
+    document.getElementById("when1").value = "";
+    document.getElementById("when2").value = "";
+    document.getElementById("where").value = "";
+    document.getElementById("why").value = "";
+    document.getElementById("impact").value = "";
+    document.getElementById("additional").value = "";
+    document.getElementById('output').value = "";
 
 }

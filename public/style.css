@@ -42,6 +42,12 @@ textarea {
     font-size: 150%;
 }
 
+textarea.feedback {
+    min-width: 800px;
+    min-height: 150px;
+    font-size: 150%;
+}
+
 input[type=radio] {
     transform: scale(1.5);
     vertical-align: middle;

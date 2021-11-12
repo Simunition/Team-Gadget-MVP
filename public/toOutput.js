@@ -34,8 +34,9 @@ async function submitData() {
         const why = document.getElementById("why").value;
         const impact = document.getElementById("impact").value;
         const additional = document.getElementById("additional").value;
-        const output = document.getElementById('output').value;
-        const data = {type, severity, reference, intro, who, what, when1, when2, where, why, impact, additional, output};
+        const output = document.getElementById("output").value;
+        const feedback = document.getElementById("feedback").value;
+        const data = {type, severity, reference, intro, who, what, when1, when2, where, why, impact, additional, output, feedback};
         const options = {
             method:'POST',
             header: {
@@ -65,7 +66,7 @@ function validateForm() {
     const where = document.getElementById("where").value;
     const why = document.getElementById("why").value;
     const impact = document.getElementById("impact").value;
-    const output = document.getElementById('output').value;
+    const output = document.getElementById("output").value;
 
     const inputArray = [intro, who, what, when1, where, why, impact, output];
 
@@ -84,7 +85,7 @@ function getHelp() {
 
 function resetForm() {
     document.getElementById("reference").value  = "";
-    document.getElementById("intro").value = "";
+    document.getElementById("intro").value = "The commander failed to ensure that";
     document.getElementById("who").value = "";
     document.getElementById("what").value = "";
     document.getElementById("when1").value = "";
@@ -93,6 +94,6 @@ function resetForm() {
     document.getElementById("why").value = "";
     document.getElementById("impact").value = "";
     document.getElementById("additional").value = "";
-    document.getElementById('output').value = "";
-
+    document.getElementById("output").value = "";
+    document.getElementById("feedback").value = "";
 }

@@ -14,7 +14,58 @@ database.loadDatabase();
 
 app.post('/api', (request, response) => {
     data = request.body;
-    data.timestamp = Date.now();
-    database.insert(data);
+    data._id = Math.random().toString(36).slice(2);
+    data_formatted = {
+        "_id": {
+            "S": data._id
+        },
+        "type": {
+          "S": data.type
+        },
+        "severity": {
+          "S": data.severity
+        },
+        "reference": {
+          "S": data.reference
+        },
+        "intro": {
+          "S": data.intro
+        },
+        "who": {
+          "S": data.who
+        },
+        "what": {
+          "S": data.what
+        },
+        "when1": {
+          "S": data.when1
+        },
+        "when2": {
+          "S": data.when2
+        },
+        "where": {
+          "S": data.where
+        },
+        "why": {
+          "S": data.why
+        },
+        "impact": {
+          "S": data.impact
+        },
+        "additional": {
+          "S": data.additional
+        },
+        "output": {
+          "S": data.output
+        },
+        "feedback": {
+            "S": data.feedback
+        },
+        "timestamp": {
+          "N": String(Date.now())
+        }
+      }
+    console.log(data);
+    database.insert(data_formatted);
     response.end('Success');
 });

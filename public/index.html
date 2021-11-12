@@ -6,6 +6,11 @@
         </head>
         <body>
             <h1>Team Gadget MVP Testing</h1>
+            <p style="text-align: center;">
+                Welcome to MVP Testing for Team Gadget, please think of an event, good or bad, that occurred in your workplace or home and document the details in the "5 W + Impact" boxes below. Once this is complete, click "Update Output" to populate the output box, and adjust as needed to create a coherent sentence or paragraph with the desired data points. Once it appears how you would like, click "Submit". Tip - hover over the label for any field to see additional information about what should go in that field.
+            </p>
+            <br>
+            <br>
             <form id=writeupform>
                 <p>
                     <label for="typeLabel" title="Type of Write-Up">Type*: </label>
@@ -18,7 +23,7 @@
                     </label>
                 </p>
                 <p>
-                    <label for="severityLabel" title="Critical - Mission Failure; Significant - ">Severity*: </label>
+                    <label for="severityLabel" title="Critical - Mission Failure; Significant - Mission Degradation, Minor - Mission Impact">Severity*: </label>
                     <label for="severity" class="radio-inline" name="severity" id="severity">
                         <input type="radio" name="severity" id="minor" value="minor" checked>Minor
                         <input type="radio" name="severity" id="significant" value="significant">Significant
@@ -65,6 +70,10 @@
                 <p>
                     <label for="output">Output*: </label>
                     <textarea id="output" name="output"></textarea>
+                </p>
+                <p>
+                    <label for="feedback">Feedback: </label>
+                    <textarea class="feedback" id="feedback" name="feedback"></textarea>
                 </p>
             </form>
             <br>
